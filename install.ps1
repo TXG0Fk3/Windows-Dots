@@ -6,5 +6,8 @@
 # Installing Main Softwares
 winget install amn.yasb LGUG2Z.komorebi LGUG2Z.whkd JanDeDobbeleer.OhMyPosh Microsoft.Powershell Fastfetch
 
+# Installing Fonts
+    #TODO
+
 # Loading Config Files
     #TODO
