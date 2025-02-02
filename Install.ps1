@@ -3,11 +3,11 @@
 # Windows Post-Install Script for my Windows-Dots
 
 
-## Installing Main Softwares ##
+<### Installing Main Softwares ###>
 winget install amn.yasb LGUG2Z.komorebi LGUG2Z.whkd JanDeDobbeleer.OhMyPosh Microsoft.Powershell Fastfetch
 
 
-## Installing Fonts ##
+<### Installing Fonts ###>
 $source = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip" # Font URL
 $destination = "$env:USERPROFILE\Downloads"
 $zipFile = "JetBrainsMono.zip"
@@ -19,16 +19,48 @@ Expand-Archive -Path "$destination\$zipFile" -DestinationPath "$destination\JetB
 $fontsPath = "$env:USERPROFILE\Downloads\JetBrainsMono"
 $fonts = Get-ChildItem -Path $fontsPath -Filter *.ttf # Get all .ttf files
 
-$shell = New-Object -ComObject Shell.Application
-$folder = $shell.Namespace(0x14) # Get Windows fonts folder
+$windowsFontsPath = [System.Environment]::GetFolderPath("Fonts") # Get Windows fonts folder
 
-foreach ($font in $fonts) { # Install fonts
+# Install fonts
+foreach ($font in $fonts) {
     $fontFile = $font.FullName
-    $folder.CopyHere($fontFile)
+    Copy-Item -Path $fontFile -Destination $windowsFontsPath
 }
 
 Remove-Item -Path "$destination\$zipFile" # Remove residual files
 Remove-Item -Path $fontsPath -Recurse
 
-## Loading Config Files ##
-    #TODO
+
+<### Loading Config Files ###>
+Copy-Item -Path "$PSScriptRoot\Config\UserProfile\*" -Destination "$env:USERPROFILE" -Recurse
+Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination [System.Environment]::GetFolderPath("MyDocuments") -Recurse
+
+# Create Startup Shortcuts
+Create-StartupShortcut -FilePath "C:\Program Files\komorebi\bin\komorebic-no-console.exe" -Args "start --whkd"
+Create-StartupShortcut -FilePath "C:\Program Files\Yasb\yasb.exe"
+
+
+
+<### Functions ###>
+function Create-StartupShortcut {
+    param (
+        [string]$FilePath,
+        [string]$Args = ""
+    )
+
+    $shortcutName = [System.IO.Path]::GetFileNameWithoutExtension($FilePath) + ".lnk"
+    $shortcutPath = [System.IO.Path]::Combine($env:USERPROFILE, "AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup", $shortcutName)
+
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    
+    $shortcut = $WScriptShell.CreateShortcut($ShortcutPath)
+    $shortcut.TargetPath = $FilePath
+    
+    if ($Args) {
+        $shortcut.Arguments = $Args
+    }
+    
+    $shortcut.Save()
+    
+    Write-Output "New Startup Shortcut created in: $ShortcutPath"
+}
