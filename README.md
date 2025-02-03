@@ -86,8 +86,6 @@
     <h3></h3>
 </div>
 
-### ⚠️ The automatic installation script still doesn't work perfectly at the moment! ⚠️
-
 - Open Windows Terminal with admin privileges.
 - Clone repositorie in your computer.
     - You can use Git (You need Git in your system `winget install Git.Git`):
