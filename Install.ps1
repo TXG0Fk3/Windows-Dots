@@ -2,6 +2,31 @@
 
 # Windows Post-Install Script for my Windows-Dots
 
+<### FUNCTIONS ###>
+function Create-StartupShortcut {
+    param (
+        [string]$FilePath,
+        [string]$Args = ""
+    )
+
+    $shortcutName = [System.IO.Path]::GetFileNameWithoutExtension($FilePath) + ".lnk"
+    $shortcutPath = [System.IO.Path]::Combine($env:USERPROFILE, "AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup", $shortcutName)
+
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    
+    $shortcut = $WScriptShell.CreateShortcut($ShortcutPath)
+    $shortcut.TargetPath = $FilePath
+    
+    if ($Args) {
+        $shortcut.Arguments = $Args
+    }
+    
+    $shortcut.Save()
+    
+    Write-Output "New Startup Shortcut created in: $ShortcutPath"
+}
+
+<#### MAIN ####>
 
 <### Installing Main Softwares ###>
 winget install amn.yasb LGUG2Z.komorebi LGUG2Z.whkd JanDeDobbeleer.OhMyPosh Microsoft.Powershell Fastfetch
@@ -32,35 +57,9 @@ Remove-Item -Path $fontsPath -Recurse
 
 
 <### Loading Config Files ###>
-Copy-Item -Path "$PSScriptRoot\Config\UserProfile\*" -Destination "$env:USERPROFILE" -Recurse
-Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination [System.Environment]::GetFolderPath("MyDocuments") -Recurse
+Copy-Item -Path "$PSScriptRoot\Config\UserProfile\*" -Destination "$env:USERPROFILE" -Recurse -Force
+Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination [System.Environment]::GetFolderPath('MyDocuments') -Recurse -Force
 
 # Create Startup Shortcuts
 Create-StartupShortcut -FilePath "C:\Program Files\komorebi\bin\komorebic-no-console.exe" -Args "start --whkd"
 Create-StartupShortcut -FilePath "C:\Program Files\Yasb\yasb.exe"
-
-
-
-<### Functions ###>
-function Create-StartupShortcut {
-    param (
-        [string]$FilePath,
-        [string]$Args = ""
-    )
-
-    $shortcutName = [System.IO.Path]::GetFileNameWithoutExtension($FilePath) + ".lnk"
-    $shortcutPath = [System.IO.Path]::Combine($env:USERPROFILE, "AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup", $shortcutName)
-
-    $WScriptShell = New-Object -ComObject WScript.Shell
-    
-    $shortcut = $WScriptShell.CreateShortcut($ShortcutPath)
-    $shortcut.TargetPath = $FilePath
-    
-    if ($Args) {
-        $shortcut.Arguments = $Args
-    }
-    
-    $shortcut.Save()
-    
-    Write-Output "New Startup Shortcut created in: $ShortcutPath"
-}
