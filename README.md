@@ -77,6 +77,10 @@
     <h3></h3>
 </div>
 
+![image](https://github.com/user-attachments/assets/c690b42e-c840-4f83-aadb-2f66002b0908)
+![image](https://github.com/user-attachments/assets/16df2275-dbb7-403d-a216-90879ab5f2e3)
+
+
 <div align="center">
     <h2>Installation</h2>
     <h3></h3>
