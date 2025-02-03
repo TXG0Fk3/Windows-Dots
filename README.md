@@ -107,6 +107,5 @@ Basically it installs the programs mentioned in the **FEATURES** section, instal
 
 ### Other Softwares
 ```powershell
-winget install Discord.Discord Valve.Steam EpicGames.EpicGamesLauncher Microsoft.PowerToys vscode Microsoft.VisualStudio.2022.Community.Preview Vim.Vim Oracle.VirtualBox Git.Git Spotify.Spotify
-Meltytech.Shotcut OBSProject.OBSStudio
+winget install Discord.Discord Valve.Steam EpicGames.EpicGamesLauncher Microsoft.PowerToys vscode Microsoft.VisualStudio.2022.Community.Preview Vim.Vim Oracle.VirtualBox Git.Git Spotify.Spotify Meltytech.Shotcut OBSProject.OBSStudio
 ```
