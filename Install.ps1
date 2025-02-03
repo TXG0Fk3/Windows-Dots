@@ -44,12 +44,13 @@ Expand-Archive -Path "$destination\$zipFile" -DestinationPath "$destination\JetB
 $fontsPath = "$env:USERPROFILE\Downloads\JetBrainsMono"
 $fonts = Get-ChildItem -Path $fontsPath -Filter *.ttf # Get all .ttf files
 
-$windowsFontsPath = [System.Environment]::GetFolderPath("Fonts") # Get Windows fonts folder
+$shell = New-Object -ComObject Shell.Application
+$windowsFontsFolder = $shell.Namespace(0x14) # Get Windows fonts folder
 
 # Install fonts
 foreach ($font in $fonts) {
     $fontFile = $font.FullName
-    Copy-Item -Path $fontFile -Destination $windowsFontsPath
+    $windowsFontsFolder.CopyHere($fontFile)
 }
 
 Remove-Item -Path "$destination\$zipFile" # Remove residual files
@@ -58,7 +59,8 @@ Remove-Item -Path $fontsPath -Recurse
 
 <### Loading Config Files ###>
 Copy-Item -Path "$PSScriptRoot\Config\UserProfile\*" -Destination "$env:USERPROFILE" -Recurse -Force
-Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination [System.Environment]::GetFolderPath('MyDocuments') -Recurse -Force
+$documentsPath = [System.Environment]::GetFolderPath("MyDocuments")
+Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination $documentsPath -Recurse -Force
 
 # Create Startup Shortcuts
 Create-StartupShortcut -FilePath "C:\Program Files\komorebi\bin\komorebic-no-console.exe" -Args "start --whkd"
