@@ -3,22 +3,22 @@
 # Windows Post-Install Script for my Windows-Dots
 
 <### FUNCTIONS ###>
-function Create-StartupShortcut {
+function New-StartupShortcut {
     param (
         [string]$FilePath,
-        [string]$Args = ""
+        [string]$Arguments = ""
     )
 
     $shortcutName = [System.IO.Path]::GetFileNameWithoutExtension($FilePath) + ".lnk"
-    $shortcutPath = [System.IO.Path]::Combine($env:USERPROFILE, "AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup", $shortcutName)
+    $shortcutPath = Join-Path -Path $env:USERPROFILE -ChildPath "AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\$shortcutName"
 
     $WScriptShell = New-Object -ComObject WScript.Shell
     
-    $shortcut = $WScriptShell.CreateShortcut($ShortcutPath)
+    $shortcut = $WScriptShell.CreateShortcut($shortcutPath)
     $shortcut.TargetPath = $FilePath
     
-    if ($Args) {
-        $shortcut.Arguments = $Args
+    if ($Arguments) {
+        $shortcut.Arguments = $Arguments
     }
     
     $shortcut.Save()
@@ -63,5 +63,5 @@ $documentsPath = [System.Environment]::GetFolderPath("MyDocuments")
 Copy-Item -Path "$PSScriptRoot\Config\Documents\*" -Destination $documentsPath -Recurse -Force
 
 # Create Startup Shortcuts
-Create-StartupShortcut -FilePath "C:\Program Files\komorebi\bin\komorebic-no-console.exe" -Args "start --whkd"
-Create-StartupShortcut -FilePath "C:\Program Files\Yasb\yasb.exe"
+New-StartupShortcut -FilePath "C:\Program Files\komorebi\bin\komorebic-no-console.exe" -Arguments "start --whkd"
+New-StartupShortcut -FilePath "C:\Program Files\Yasb\yasb.exe"
