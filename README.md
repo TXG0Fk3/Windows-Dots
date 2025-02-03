@@ -86,6 +86,8 @@
     <h3></h3>
 </div>
 
+### ⚠️ The automatic installation script still doesn't work perfectly at the moment! ⚠️
+
 - Open Windows Terminal with admin privileges.
 - Clone repositorie in your computer.
     - You can use Git (You need Git in your system `winget install Git.Git`):
@@ -102,7 +104,7 @@
     .\install.ps1
     ```
 
-### !! What does the installer do? !!
+### ⚠️ What does the installer do? ⚠️
 Basically it installs the programs mentioned in the **FEATURES** section, installs the **JetBrainsMono Nerd Font** and copies the config files to their respective folders. 
 
 ### Other Softwares
