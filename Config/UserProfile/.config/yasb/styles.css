@@ -269,7 +269,7 @@
 }
 
 .media-widget .btn:hover {
-    color: #ffffff;
+    color: #45475a;
 }
 
 .media-widget .btn.prev {
@@ -288,6 +288,6 @@
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
     color: #4e525c;
-    font-size: 12px;
+    font-size: 18px;
     background-color: rgba(0, 0, 0, 0);
 }
