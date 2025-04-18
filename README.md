@@ -77,8 +77,9 @@
     <h3></h3>
 </div>
 
-![image](https://github.com/user-attachments/assets/c690b42e-c840-4f83-aadb-2f66002b0908)
-![image](https://github.com/user-attachments/assets/16df2275-dbb7-403d-a216-90879ab5f2e3)
+![image](https://github.com/user-attachments/assets/53541acd-a48f-441b-be3e-e5359180e542)
+![image](https://github.com/user-attachments/assets/c215456c-cec8-4906-87ed-8698f02282e7)
+
 
 
 <div align="center">
