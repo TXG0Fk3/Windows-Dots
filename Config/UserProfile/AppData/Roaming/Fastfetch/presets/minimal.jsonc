@@ -14,33 +14,33 @@
 	"title",
         {
             "type": "os",
-            "key": "os      ",
+            "key": " OS ",
             "keyColor": "33",  // = color3
         },
         {
             "type": "kernel",
-            "key": "kernel  ",
+            "key": " KNL",
             "keyColor": "33",
         },
         {
             "type": "wm",
-            "key": "wm      ",
+            "key": " WM ",
             "keyColor": "33",
         },
         {
             "type": "uptime",
             "format": "{2}h {3}m",
-            "key": "uptime  ",
+            "key": " UP ",
             "keyColor": "33",
         },
         {
             "type": "swap",
-            "key": "pagefile",
+            "key": " PGF",
             "keyColor": "33",
         },
         {
             "type": "memory",
-            "key": "memory  ",
+            "key": " MEM",
             "keyColor": "33",
         },
         "break",
