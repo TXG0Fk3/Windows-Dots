@@ -4,12 +4,8 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "id": "User.switchToTab.D3F0B923"
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": 
@@ -20,8 +16,12 @@
             "id": "User.switchToTab.2A0DA8E0"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "id": "User.switchToTab.D3F0B923"
         },
         {
             "command": 
@@ -35,17 +35,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 7
+                "index": 4
             },
-            "id": "User.switchToTab.D7681B66"
+            "id": "User.switchToTab.F747588A"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 4
+                "index": 7
             },
-            "id": "User.switchToTab.F747588A"
+            "id": "User.switchToTab.D7681B66"
         },
         {
             "command": 
@@ -72,17 +72,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 5
+                "index": 2
             },
-            "id": "User.switchToTab.75247157"
+            "id": "User.switchToTab.87C324ED"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 2
+                "index": 5
             },
-            "id": "User.switchToTab.87C324ED"
+            "id": "User.switchToTab.75247157"
         },
         {
             "command": 
@@ -103,20 +103,20 @@
     "keybindings": 
     [
         {
-            "id": "User.switchToTab.D3F0B923",
-            "keys": "ctrl+1"
-        },
-        {
-            "id": "User.switchToTab.F747588A",
-            "keys": "ctrl+5"
+            "id": null,
+            "keys": "ctrl+alt+3"
         },
         {
             "id": null,
             "keys": "ctrl+alt+2"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+3"
+            "id": "User.switchToTab.F747588A",
+            "keys": "ctrl+5"
+        },
+        {
+            "id": "User.switchToTab.D3F0B923",
+            "keys": "ctrl+1"
         },
         {
             "id": "User.copy.644BA8F2",
@@ -127,12 +127,12 @@
             "keys": "ctrl+8"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+1"
-        },
-        {
             "id": "User.switchToTab.75247157",
             "keys": "ctrl+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
         },
         {
             "id": null,
@@ -213,14 +213,14 @@
         "list": 
         [
             {
-                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit -NoProfile -Command \"oh-my-posh init pwsh --config \\\"$env:POSH_THEMES_PATH\\powerlevel10k_modern.omp.json\\\" | Invoke-Expression",
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -NoExit -NoProfile -Command \"oh-my-posh init pwsh --config \\\"$env:POSH_THEMES_PATH\\catppuccin_mocha.omp.json\\\" | Invoke-Expression",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoExit -NoProfile -Command \"oh-my-posh init pwsh --config \\\"$env:POSH_THEMES_PATH\\powerlevel10k_modern.omp.json\\\" | Invoke-Expression",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoExit -NoProfile -Command \"oh-my-posh init pwsh --config \\\"$env:POSH_THEMES_PATH\\catppuccin_mocha.omp.json\\\" | Invoke-Expression",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell",
