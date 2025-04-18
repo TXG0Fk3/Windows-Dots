@@ -23,19 +23,19 @@
 }
 
 .win-btn {
-    background-color: #F3BF7D;
+    background-color: #fab387;
 }
 
 .win-btn .icon {
-    color: #142123;
+    color: #1e1e2e;
 }
 
 .komorebi-workspaces {
-    background-color: #221f2e;
+    background-color: #1e1e2e;
 }
 
 .komorebi-workspaces .offline-status {
-    color: #627199;
+    color: #7f849c;
     font-size: 12px;
     padding: 0 4px;
     font-weight: 600;
@@ -43,7 +43,7 @@
 
 .komorebi-workspaces .ws-btn {
     border: none;
-    background-color: #9cd1dd;
+    background-color: #eba0ac;
     margin: 0px 4px;
     padding: 0;
     color: rgba(0, 0, 0, 0);
@@ -53,53 +53,54 @@
 }
 
 .komorebi-workspaces .ws-btn:hover {
-    background-color: #91b2e7;
+    background-color: #74c7ec;
 }
 
 .komorebi-workspaces .ws-btn.populated {
-    background-color: #ea7094;
+    background-color: #b4befe;
 }
 
 .komorebi-workspaces .ws-btn.active {
     color: rgba(149, 177, 255, 0);
-    background-color: #c0aae8;
+    background-color: #74c7ec;
     width: 36px;
     height: 10px;
     border-radius: 5px;
 }
 
 .traffic-widget {
-    background-color: #9ecfd7;
+    background-color: #74c7ec;
     padding: 0;
 }
 
 .traffic-widget .icon {
-    color: #142123;
+    color: #1e1e2e;
     padding-right: 6px;
     padding-left: 6px;
 }
 
 .traffic-widget .label {
-    background-color: #221f2e;
+    background-color: #1e1e2e;
     margin: 1px;
     border-radius: 6px;
     padding: 0 6px;
-    color: #9ecfd7;
+    color: #74c7ec;
 }
 
 .clock-widget {
-    background-color: #c2a8e3;
+    background-color: #89b4fa;
     padding: 0;
 }
 
 .clock-widget .icon {
-    color: #142123;
-    padding: 0 6px;
+    color: #1e1e2e;
+    font-size: 20px;
+    padding: 0 6px 0 9px;
 }
 
 .clock-widget .label {
-    background-color: #221f2e;
-    color: #c2a8e3;
+    background-color: #1e1e2e;
+    color: #89b4fa;
     padding: 0 6px;
     margin: 1px;
     border-radius: 6px;
@@ -111,12 +112,12 @@
 }
 
 .volume-widget .icon {
-    color: #142123;
-    padding: 0 6px;
+    color: #1e1e2e;
+    padding: 1px 6px 0 8px;
 }
 
 .volume-widget .label {
-    background-color: #221f2e;
+    background-color: #1e1e2e;
     color: #f38ba8;
     padding: 0 8px;
     margin: 1px;
@@ -124,55 +125,37 @@
 }
 
 .weather-widget {
-    background-color: #9ecfd7;
+    background-color: #f9e2af;
     padding: 0;
 }
 
 .weather-widget .icon {
-    color: #142123;
-    padding: 0 6px;
+    color: #1e1e2e;
+    padding: 0 6px 0 8px;
 }
 
 .weather-widget .label {
-    background-color: #221f2e;
-    color: #9ecfd7;
+    background-color: #1e1e2e;
+    color: #f9e2af;
     padding: 0 6px;
     margin: 1px;
     border-radius: 6px;
 }
 
 .power-menu-widget {
-    background-color: #c4a7e7;
+    background-color: #cba6f7;
     padding: 0;
 }
 
 .power-menu-widget .label {
-    color: #142123;
-    padding: 0 8px;
+    color: #1e1e2e;
+    padding: 0 10px;
     font-weight: bold;
     font-size: 14px;
 }
 
-.language-widget {
-    background-color: #f5c276;
-    padding: 0;
-}
-
-.language-widget .icon {
-    color: #142123;
-    padding: 0 6px;
-}
-
-.language-widget .label {
-    background-color: #221f2e;
-    color: #f5c276;
-    padding: 0 8px;
-    margin: 1px;
-    border-radius: 6px;
-}
-
 .taskbar-widget {
-    background-color: #221f2e;
+    background-color: #1e1e2e;
     padding: 0;
 }
 
@@ -183,13 +166,13 @@
 }
 
 .active-window-widget {
-    background-color: #c6a7e8;
+    background-color: #cba6f7;
     padding: 0;
 }
 
 .active-window-widget .label {
-    color: #c6a7e8;
-    background-color: #221f2e;
+    color: #cba6f7;
+    background-color: #1e1e2e;
     padding: 0 8px;
     margin: 1px;
     border-radius: 6px;
@@ -267,33 +250,39 @@
 
 /* MEDIA WIDGET */
 .media-widget {
-    background-color: #5cce86;
+    background-color: #a6e3a1;
     padding: 0;
 }
 
 .media-widget .label {
-    background-color: #221f2e;
+    background-color: #1e1e2e;
     margin: 1px;
     border-radius: 6px;
     padding: 0 6px;
-    color: #5cce86;
+    color: #a6e3a1;
 }
 
 .media-widget .btn {
-    color: #142123;
-    padding-right: 2px;
-    padding-left: 2px;
+    color: #1e1e2e;
     font-family: Segoe Fluent Icons;
+    font-size: 18px;
 }
 
 .media-widget .btn:hover {
     color: #ffffff;
 }
 
+.media-widget .btn.prev {
+    padding: 0px 6px 0px 6px;
+}
+
 .media-widget .btn.play {
-    border-radius: 14px;
-    font-size: 16px;
-    margin-left: 2px;
+    font-size: 22px;
+    padding-top: 2px;
+}
+
+.media-widget .btn.next {
+    padding: 0px 4px 0px 6px;
 }
 
 .media-widget .btn.disabled:hover,

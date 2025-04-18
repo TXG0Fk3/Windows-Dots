@@ -16,10 +16,11 @@
   "border_width": 4,
   "border_offset": -1,
   "border_colours": {
-    "single": "#c6a7e8",
-    "monocle": "#9ecfd7",
-    "stack": "#f3bf7d",
-    "unfocused": "#6b6b6b"
+    "single": "#74c7ec",
+    "floating": "#74c7ec",
+    "monocle": "#cba6f7",
+    "stack": "#f9e2af",
+    "unfocused": "#6c7086"
   },
   "stackbar": {
     "height": 32,
