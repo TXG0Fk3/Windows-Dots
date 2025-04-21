@@ -42,6 +42,7 @@ bars:
         ]
       right:
         [
+          "systray",
           "media",
           "weather",
           "volume",
@@ -166,3 +167,14 @@ widgets:
         next_track: "\uf051"
         play: "\uf04b"
         pause: "\uf04c"
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: ""
+      label_expanded: ""
+      show_unpinned: true
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false

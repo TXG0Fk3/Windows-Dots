@@ -291,3 +291,29 @@
     font-size: 18px;
     background-color: rgba(0, 0, 0, 0);
 }
+
+.systray {
+    background: transparent;
+    border: None;
+    margin: 0;
+}
+
+.systray .button {
+    border-radius: 4px;
+    padding: 2px 2px;
+}
+
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+}
+
+.systray .pinned-container[forceshow=true] {
+    background: #74c7ec;
+}
+
+.systray .button[dragging=true] {
+    background: #74c7ec;
+    border-color: #74c7ec;
+}
