@@ -58,7 +58,7 @@ widgets:
       label_no_window: ""
       label_icon: true
       label_icon_size: 18
-      max_length: 56
+      max_length: 25
       max_length_ellipsis: "..."
       monitor_exclusive: true
   clock:
