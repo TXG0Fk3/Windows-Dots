@@ -56,6 +56,10 @@
             "id": "User.switchToTab.6CD791B"
         },
         {
+            "command": "toggleFocusMode",
+            "id": "User.toggleFocusMode"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
