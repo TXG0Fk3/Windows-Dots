@@ -5,9 +5,9 @@
 
 <div align="center">
 
+[![Forgejo](https://img.shields.io/badge/Hosted_at-Forgejo-ff94bc?style=for-the-badge&logo=forgejo&logoColor=white)](https://fgj.txgfk.xyz/TXG0Fk3/Windows-Dots)
+![GitHub last commit (mirror)](https://img.shields.io/github/last-commit/TXG0Fk3/Windows-Dots?label=last%20mirror&style=for-the-badge&color=ff94bc)
 ![GitHub Repo stars](https://img.shields.io/github/stars/TXG0Fk3/Windows-Dots?style=for-the-badge&color=ff94bc)
-![GitHub last commit](https://img.shields.io/github/last-commit/TXG0Fk3/Windows-Dots?style=for-the-badge&color=ff94bc)
-![GitHub repo size](https://img.shields.io/github/repo-size/TXG0Fk3/Windows-Dots?style=for-the-badge&color=ff94bc)
 <br/>
 </div>
 
